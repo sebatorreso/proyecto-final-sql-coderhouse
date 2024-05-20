@@ -381,9 +381,9 @@ Se generaron los siguientes roles:
 
 Se crearon los siguientes usuarios:
 
-1. `sebastian@localhost`: A quien se le asigna el *role_crud_rrhh*
-2. `alejandra@localhost`: A quien se le asignan los roles *role_select_vistas* y *role_insert_update_delete*
-3. `ignacio@localhost`: A quien se le asigna el rol *role_select_vistas*
+1. `sebastian@localhost`: A quien se le asigna el **role_crud_rrhh**
+2. `alejandra@localhost`: A quien se le asignan los roles **role_select_vistas** y **role_insert_update_delete**
+3. `ignacio@localhost`: A quien se le asigna el rol **role_select_vistas**
 
 ---
 
