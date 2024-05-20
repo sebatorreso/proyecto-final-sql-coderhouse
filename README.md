@@ -98,7 +98,7 @@ Registra los cargos que han sido asignado a los empleados, junto con el salario 
 ---
 
 ### Tablas
-Tablas y descripción de los tipos de datos
+Tablas y descripción de tipos de datos
 
 | Tabla             | Columna                | Tipo de Datos                         |
 | -------------     | ---------------------- |                                  ---: |
