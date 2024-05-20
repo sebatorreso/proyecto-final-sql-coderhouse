@@ -1,7 +1,39 @@
-# Proyecto CoderHouse
-#### Sebastián Torres
+<center>
+<img src="https://objetivo.news/download/multimedia.normal.bcba10cea1861629.Y29kZXJob3VzZS1xdWUtZXMtcXVlLWhhY2VuX25vcm1hbC53ZWJw.webp" style="width: 100% ; aspect-ratio:16/9">
+</center>
 
-### Problema:
+# <center>Entrega de Proyecto Final - SQL </center>
+Estudiante : Sebastián Torres
+
+Comisión : 53180
+
+Tutores : Carla Palermo & Santiago González
+
+Docente : Anderson Ocaña 
+
+---
+
+## Indice
+
+ - [Temática del Proyecto](#temática-del-proyecto)
+ - [Modelo de Negocio](#modelo-de-negocio)
+ - [Diagrama Entidad-Relación](#diagrama-entidad-relación)
+ - [Listado de Tablas y Descripción](#listado-de-tablas-y-descripción)
+ - [Ingesta de Datos](#ingesta-de-datos)
+ - [Objetos de la Base de Datos](#objetos-de-la-base-de-datos)
+   - [Documentación de Funciones](#documentación-de-funciones)
+   - [Documentación de Triggers](#documentación-de-triggers)
+   - [Documentación de Procedimientos Almacenados](#documentación-de-procedimientos-almacenados)
+   - [Documentación de Vistas](#documentación-de-vistas)
+   - [Roles, Permisos y Usuarios](#roles-permisos-y-usuarios)
+ - [Backup de la Base de Datos](#backup-de-la-base-de-datos)
+ - [Herramientas y Tecnologías Usadas](#herramientas-y-tecnologías-usadas)
+ - [Instrucciones para Levantar el Proyecto en CodeSpaces GitHub](#instrucciones-para-levantar-el-proyecto-en-codespaces-github)
+ - [Formato de Entrega](#formato-de-entrega)
+
+---
+
+### Temática del Proyecto:
 
 Una empresa de tecnología con operación en varios países solicitó diseñar un sistema de gestión de recursos humanos.
 
