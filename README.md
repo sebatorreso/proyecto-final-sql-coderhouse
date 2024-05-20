@@ -371,7 +371,7 @@ VALUES
 
 ## Roles, Permisos y Usuarios
 
-La creación de usuarios, roles y permisos se encuentran en el script **role_users.sql** en la carpeta **objects** del proyecto.
+El script de creación de usuarios, roles y permisos se encuentra bajo el nombre de **role_users.sql** en la carpeta **objects** del proyecto.
 
 Se generaron los siguientes roles:
 
@@ -385,6 +385,63 @@ Se crearon los siguientes usuarios:
 2. `alejandra@localhost`: A quien se le asignan los roles *role_select_vistas* y *role_insert_update_delete*
 3. `ignacio@localhost`: A quien se le asigna el rol *role_select_vistas*
 
+---
+
+## Backup de la Base de Datos
+
+El backup o respaldo de la base de datos **gestion_rrhh** contiene la estructura y la data involucrada, asi como también los procedimientos, funciones y triggers (objetos).
+Es del tipo Self-Contained File.
+
+El script se encuentra en la carpeta *backup* bajo el nombre de *gestion_rrhh-20240519.sql*
+
+---
+
+[<- volver al índice](#indice)
+
+---
+
+## Herramientas y Tecnologías Usadas
+* MySQL (motor de bases de datos, version 8.0.36)
+* MySQL Workbench (interfaz gráfica, version 8.0.36)
+* Visual Studio Code (para desarrollar el documento README.md)
+* Google Drive y Zoom (para ver el contenido de las clases)
+* https://mockaroo.com/ (para generar datos ficticios)
+* https://www.tablesgenerator.com/ (para transformar tablas de formato csv a markdown)
+* Makefile (para generar una interfaz sencilla de procesos)
+* Docker (para generar un container)
+* GitHub (para entregar el proyecto)
+
+---
+
+[<- volver al índice](#indice)
+
+---
 
 
+## Instrucciones para Levantar el Proyecto en CodeSpaces GitHub
+
+* env : archivo con contraseñas y data secretas
+* Makefile : abstracción de creacción del proyecto
+* docker-compose.yml : permite generar las bases de datos en forma de contenedores
+
+### Pasos para arrancar el proyecto
+
+* En la terminal de linux escribir :
+    - `make` _si da un error de que no conexion al socket, volver al correr el comando `make`_
+    - `make clean-db` limpia la base de datos
+    - `make test-db` para observar los datos de cada tabla
+    - `make backup-db` para realizar un backup de la base de datos
+    - `make access-db` para acceder a la base de datos
+
+---
+
+[<- volver al índice](#indice)
+
+---
+
+## Formato de Entrega 
+
+El Proyecto Final de SQL se entregará como repositorio de GitHub, al cual se podrá acceder mediante el siguiente link:
+
+**https://github.com/sebatorreso/proyecto-final-sql-coderhouse**
 
