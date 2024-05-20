@@ -21,10 +21,10 @@ Docente : Anderson Ocaña
  - [Listado de Tablas y Descripción](#listado-de-tablas-y-descripción)
  - [Ingesta de Datos](#ingesta-de-datos)
  - [Objetos de la Base de Datos](#objetos-de-la-base-de-datos)
-   - [Documentación de Funciones](#documentación-de-funciones)
-   - [Documentación de Triggers](#documentación-de-triggers)
-   - [Documentación de Procedimientos Almacenados](#documentación-de-procedimientos-almacenados)
    - [Documentación de Vistas](#documentación-de-vistas)
+   - [Documentación de Funciones](#documentación-de-funciones)
+   - [Documentación de Procedimientos Almacenados](#documentación-de-procedimientos-almacenados)
+   - [Documentación de Triggers](#documentación-de-triggers)
    - [Roles, Permisos y Usuarios](#roles-permisos-y-usuarios)
  - [Backup de la Base de Datos](#backup-de-la-base-de-datos)
  - [Herramientas y Tecnologías Usadas](#herramientas-y-tecnologías-usadas)
@@ -33,9 +33,19 @@ Docente : Anderson Ocaña
 
 ---
 
-### Temática del Proyecto:
+## Temática del Proyecto:
 
 Una empresa de tecnología con operación en varios países solicitó diseñar un sistema de gestión de recursos humanos.
+
+La base de datos debe permitir gestionar datos, facilitar la recuperación y manipulación de información rápida, precisa y segura. Debe permitir a la organización tomar decisiones de manera informada, garantizar la integridad de los datos, adaptarse a cambios en la estructura o regulaciones, y optimizar el rendimiento del sistema para una experiencia de usuario óptima.
+
+### Objetivo
+
+Diseñar e implementar una base de datos relacional que mejore la eficiencia y la efectividad en la administración del capital humano de la organización.
+
+---
+
+## Modelo de Negocio
 
 La empresa necesita una base de datos robusta que le permita gestionar de manera eficiente información sobre:
 
@@ -45,15 +55,15 @@ La empresa necesita una base de datos robusta que le permita gestionar de manera
 4. **Salarios**: La base de datos debe poder registrar los salarios que ofrecerá la empresa de acuerdo al cargo y experiencia del empleado, la moneda en que se pagó, etc.
 5. **País**: Se debe contar con los registros de los distintos paises en donde opera la empresa.
 
+---
 
+## Diagrama Entidad-Relación
 
-## Objetivo
+[![Diagrama-ER.png](https://i.postimg.cc/kXXXD2n6/Diagrama-ER.png)](https://postimg.cc/G9V15hTd)
 
-Diseñar e implementar una base de datos relacional que mejore la eficiencia y la efectividad en la administración del capital humano de la organización.
+---
 
-La base de datos debe permitir gestionar datos, facilitar la recuperación y manipulación de información rápida, precisa y segura. Debe permitir a la organización tomar decisiones de manera informada, garantizar la integridad de los datos, adaptarse a cambios en la estructura o regulaciones, y optimizar el rendimiento del sistema para una experiencia de usuario óptima.
-
-## Descripción de la Base de Datos - Sistema de Gestión para Recursos Humanos
+## Listado de Tablas y Descripción
 
 
 1. **EMPLEADOS** (Tabla de Datos o Hechos):
@@ -85,8 +95,10 @@ Contiene los registros de los diferentes paises en donde opera la empresa.
 
 Registra los cargos que han sido asignado a los empleados, junto con el salario acordado.
 
-### Sistema Gestión de RRHH - Entidades y Atributos
-Descripción de los tipos de datos
+---
+
+### Tablas
+Tablas y descripción de los tipos de datos
 
 | Tabla             | Columna                | Tipo de Datos                         |
 | -------------     | ---------------------- |                                  ---: |
@@ -118,19 +130,37 @@ Descripción de los tipos de datos
 |                   | FECHA_FIN              | DATE DEFAULT '9999-12-31'             |
 |                   |                        |                                       |  
 
-A continuación se detalla la documentación corresponidente a la **Segunda PreEntrega SQL**
+---
 
-# Segunda PreEntrega Proyecto SQL
-## Documentación de Vistas
+## Ingesta de Datos
 
-### Vista: EmpleadosPorGenero
+La ingesta de datos se lleva a cabo a través del script **population.sql** ubicado en la carpeta **structure** del proyecto.
+
+---
+
+## Objetos de la Base de Datos
+
+En la carpeta **objects** del proyecto se encuentran los objetos de la base de datos, estos son:
+* vistas.sql
+* funciones.sql
+* procedures.sql
+* triggers.sql
+* roles_users.sql
+
+--- 
+
+### Documentación de Vistas
+
+---
+
+### Vista 1: EmpleadosPorGenero
 **Descripción:** Proporciona una visión general de la distribución de empleados por género.
 
 **Columnas:** 
 * **Genero:** Género del empleado (Masculino o Femenino)
 * **Cantidad_Empleados:** Número de empleados por género
 
-### Vista: EmpleadosCargos
+### Vista 2: EmpleadosCargos
 **Descripción:** Muestra a qué cargos están o han sido asignados los empleados, junto con el nombre y la descripción del cargo, salario y tipo moneda.
 
 **Columnas:** 
@@ -142,14 +172,14 @@ A continuación se detalla la documentación corresponidente a la **Segunda PreE
 * **Monto_Salario:** Monto del salario asignado al empleado
 * **Tipo_Moneda:** Tipo de moneda en el cual se encuentra el salario
 
-### Vista: EmpleadosPorDepartamento
+### Vista 3: EmpleadosPorDepartamento
 **Descripción:** Muestra la cantidad de empleados que trabajan en cada departamento.
 
 **Columnas:**
 * **Nombre_Depto:** Nombre de departamento en cuestión
 * **Cantidad_Empleados:** Número de empleados que trabajan en el departamento
 
-### Vista: ResumenDepartamentos
+### Vista 4: ResumenDepartamentos
 **Descripción:** Proporciona un resumen de cada departamento, incluyendo el nombre del departamento, descripción, país y número de empleados.
 
 **Columnas:** 
@@ -158,17 +188,20 @@ A continuación se detalla la documentación corresponidente a la **Segunda PreE
 * **Nombre_Pais:** Nombre del país en dónde se ubica el departamento
 * **Num_Empleados:** Número de empleados en cada departamento
 
-### Vista: CargosSinAsignar
+### Vista 5: CargosSinAsignar
 **Descripción:** Muestra los cargos que no han sido asignados a empleados.
 
 **Columnas:** 
 * **Nombre_Cargo:** Nombre del cargo que no ha sido asignado
 * **Descripcion_Cargo:** Descripcion del cargo que no ha sido asignado
 
+---
 
-## Documentación de Funciones
+### Documentación de Funciones
 
-### Función: salario_promedio_departamento
+---
+
+### Función 1: salario_promedio_departamento
 **Descripción:** Toma el ID de un departamento, y calcula el salario promedio de los empleados de ese departamento en específico.
 
 **Parámetros:**
@@ -183,7 +216,7 @@ A continuación se detalla la documentación corresponidente a la **Segunda PreE
 SELECT salario_promedio_departamento(8);
 ```
 
-### Función: nombre_departamento_empleado
+### Función 2: nombre_departamento_empleado
 **Descripción:** Toma el ID de un empleado y devuelve el nombre del departamento al que está asignado actualmente.
 
 **Parámetros:**
@@ -197,10 +230,13 @@ SELECT salario_promedio_departamento(8);
 ```sql
 SELECT nombre_departamento_empleado(3);
 ```
+---
 
-## Documentación de Procedimientos Almacenados
+### Documentación de Procedimientos Almacenados
 
-### Procedimiento: EmpleadosPorDepartamento
+---
+
+### Procedimiento 1: EmpleadosPorDepartamento
 
 **Descripción:** Devuelve una lista con los empleados que pertenecen a un departamento específico.
 
@@ -220,7 +256,7 @@ SELECT nombre_departamento_empleado(3);
 CALL EmpleadosPorDepartamento(6);
 ```
 
-### Procedimiento: BuscarEmpleadoPorID
+### Procedimiento 2: BuscarEmpleadoPorID
 
 **Descripción:** Busca a un empleado por su ID y retorna sus detalles, generando un error si no se encuentra.
 
@@ -240,9 +276,65 @@ CALL EmpleadosPorDepartamento(6);
 CALL BuscarEmpleadoPorID(8);
 ```
 
-## Documentación de Triggers
+### Procedimiento con Transacción: AddEmployeeAndAssignRole
 
-### Trigger: ControlarEliminacionEmpleado
+**Descripción:** Este procedimiento asegurará que tanto la inserción del empleado como la asignación de su cargo se realicen de manera automática. Si alguna de las operaciones falla, toda la transacción se revertirá manteniendo la integridad de los datos.
+
+**Parámetros:**
+
+* **p_nombre_empleado:** Nombre del empleado a ingresar
+* **p_apellido_empleado:** Apellido del empleado a ingresar
+* **p_fecha_nac:** Fecha de nacimiento del empleado
+* **p_genero_nac:** Género del empleado
+* **p_email:** Email del empleado
+* **p_cargo_id:** Identificador único del cargo del empleado
+* **p_salario_id:** Identificador único del salario para el empleado
+* **p_fecha_ini:** Fecha de inicio de contrato en el empleado
+
+**Retorno:**
+
+* Un error por mal ingreso en algunos de los parámetros devolverá el mensaje **'Error: Transacción fallida'**
+* En caso contrario, hará el ingreso correcto del nuevo empleado y sus datos a las tablas **EMPLEADOS** y **CARGOS_ASIGNADOS**
+
+**Ejemplo de uso:**
+
+* Ejemplo 1: Error: Transacción fallida.
+
+```sql
+CALL AddEmployeeAndAssignRole(
+	'ANTONIO',
+    'SANDOVAL',
+    '1990-11-11',
+    'MASCULINO',
+    'ANTONIO@MAIL.COM',
+    7,
+    1500,
+    '2017-05-01'
+	);
+```
+
+* Ejemplo 2: Se ingresan los datos del empleado.
+
+```sql
+CALL AddEmployeeAndAssignRole(
+	'ANTONIO',
+    'SANDOVAL',
+    '1990-11-11',
+    'MASCULINO',
+    'ANTONIO@MAIL.COM',
+    7,
+    7,
+    '2017-05-01'
+	);
+```
+  
+---
+
+### Documentación de Triggers
+
+---
+
+### Trigger 1: ControlarEliminacionEmpleado
 
 **Descripción:** Evita que se elimine un empleado que está actualmente asignado a un cargo activo en la tabla de CARGOS_ASIGNADOS.
 
@@ -258,7 +350,7 @@ CALL BuscarEmpleadoPorID(8);
 DELETE FROM EMPLEADOS WHERE EMPLEADO_ID = 16;
 ```
 
-### Trigger: ControlarEmpleadosMenoresEdad
+### Trigger 2: ControlarEmpleadosMenoresEdad
 
 **Descripción:** Evita que se registren nuevos empleados menores de edad, generando un error si se intenta hacerlo.
 
@@ -274,6 +366,25 @@ INSERT INTO EMPLEADOS (NOMBRE_EMPLEADO, APELLIDO_EMPLEADO, FECHA_NAC, GENERO, EM
 VALUES
 	('IGNACIO','BASCUR','2010-12-21','MASCULINO','IGNACIO@MAIL.COM');
 ```
+
+---
+
+## Roles, Permisos y Usuarios
+
+La creación de usuarios, roles y permisos se encuentran en el script **role_users.sql** en la carpeta **objects** del proyecto.
+
+Se generaron los siguientes roles:
+
+1. `role_crud_rrhh`: Tiene permiso para CRUD en toda las tablas de la Base de Datos.
+2. `role_select_vistas`: Tiene permiso para hacer consultas de lectura en las tablas de la Base de Datos.
+3. `role_insert_update_delete`: Tiene permiso para Insertar, Actualizar y Eliminar registros en las tablas de la Base de Datos.
+
+Se crearon los siguientes usuarios:
+
+1. `sebastian@localhost`: A quien se le asigna el *role_crud_rrhh*
+2. `alejandra@localhost`: A quien se le asignan los roles *role_select_vistas* y *role_insert_update_delete*
+3. `ignacio@localhost`: A quien se le asigna el rol *role_select_vistas*
+
 
 
 
