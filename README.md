@@ -298,7 +298,7 @@ CALL BuscarEmpleadoPorID(8);
 
 **Ejemplo de uso:**
 
-* Ejemplo 1: Error: Transacción fallida.
+* **Ejemplo 1:** Error: Transacción fallida.
 
 ```sql
 CALL AddEmployeeAndAssignRole(
@@ -313,7 +313,7 @@ CALL AddEmployeeAndAssignRole(
 	);
 ```
 
-* Ejemplo 2: Se ingresan los datos del empleado.
+* **Ejemplo 2:** Se ingresan los datos del empleado.
 
 ```sql
 CALL AddEmployeeAndAssignRole(
