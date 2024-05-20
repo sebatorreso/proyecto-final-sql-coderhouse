@@ -392,7 +392,7 @@ Se crearon los siguientes usuarios:
 El backup o respaldo de la base de datos **gestion_rrhh** contiene la estructura y la data involucrada, asi como también los procedimientos, funciones y triggers (objetos).
 Es del tipo Self-Contained File.
 
-El script se encuentra en la carpeta *backup* bajo el nombre de *gestion_rrhh-20240519.sql*
+El script se encuentra en la carpeta **backup** bajo el nombre de **gestion_rrhh-20240519.sql**
 
 ---
 
