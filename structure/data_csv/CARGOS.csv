@@ -1,0 +1,11 @@
+﻿CARGO_ID;NOMBRE_CARGO;DESCRIPCION_CARGO;DEPTO_ID
+1;CEO EJECUTIVO;Liderazgo, estrategia, toma de decisiones;6
+2;CEO FINANCIERO;Finanzas, presupuesto, inversion, contabilidad;1
+3;CEO TECNOLOGIA;Innovacion, tecnologia, desarrollo, estrategia;4
+4;INGENIERO OPERACIONES;Eficiencia, operaciones, logistica, gestion;3
+5;DIRECTOR DE MARKETING;Promocion, marca, estrategia, publicidad;2
+6;GERENTE RRHH;Personal, contratacion, desarrollo, cultura;5
+7;PROJECT MANAGER;Planificacion, coordinacion, seguimiento, entrega;6
+8;SALES MANAGER;Estrategia, clientes, negociacion, ventas;2
+9;ADMINISTRADOR TI;Redes, sistemas, seguridad, soporte;4
+10;CONSEJERO LEGAL;Leyes, regulaciones, contratos, asesoramiento;8
